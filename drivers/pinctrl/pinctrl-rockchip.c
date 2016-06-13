@@ -365,7 +365,7 @@ static inline struct rockchip_pin_bank *gc_to_pin_bank(struct gpio_chip *gc)
 	return container_of(gc, struct rockchip_pin_bank, gpio_chip);
 }
 
-static const inline struct rockchip_pin_group *pinctrl_name_to_group(
+static inline const struct rockchip_pin_group *pinctrl_name_to_group(
 					const struct rockchip_pinctrl *info,
 					const char *name)
 {
