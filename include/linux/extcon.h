@@ -217,7 +217,7 @@ extern void devm_extcon_dev_free(struct device *dev, struct extcon_dev *edev);
 
 /*
  * get/set_cable_state access each bit of the 32b encoded state value.
- * They are used to access the status of each cable based on the cable_name.
+ * They are used to access the status of each cable based on the cable id.
  */
 extern int extcon_get_cable_state_(struct extcon_dev *edev, unsigned int id);
 extern int extcon_set_cable_state_(struct extcon_dev *edev, unsigned int id,
