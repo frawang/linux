@@ -295,7 +295,6 @@ static int meson_pinconf_set(struct pinctrl_dev *pcdev, unsigned int pin,
 	enum pin_config_param param;
 	unsigned int reg, bit;
 	int i, ret;
-	u16 arg;
 
 	ret = meson_get_domain_and_bank(pc, pin, &domain, &bank);
 	if (ret)
@@ -303,7 +302,6 @@ static int meson_pinconf_set(struct pinctrl_dev *pcdev, unsigned int pin,
 
 	for (i = 0; i < num_configs; i++) {
 		param = pinconf_to_config_param(configs[i]);
-		arg = pinconf_to_config_argument(configs[i]);
 
 		switch (param) {
 		case PIN_CONFIG_BIAS_DISABLE:
